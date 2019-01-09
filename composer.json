@@ -1,12 +1,12 @@
 {
-    "name": "tightenco/laravel-elm",
-    "description": "Render your Elm programs in Laravel",
+    "name": "otiteca971/laravel-elm",
+    "description": "Render your Elm programs in Laravel --- forked from tightenco/laravel-elm",
     "keywords": ["laravel", "elm"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Logan Henson",
-            "email": "logan@tighten.co"
+            "name": "Olivier TITECA-BEAUPORT",
+            "email": "olivier@earns.fr"
         }
     ],
     "require": {
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Tightenco\\Elm\\": "src/"
+            "earns\\Elm\\": "src/"
         }
     }
 }

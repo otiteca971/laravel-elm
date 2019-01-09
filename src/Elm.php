@@ -20,18 +20,19 @@ class Elm
         <div id="<?= $app_name ?>"></div>
 
         <script>
-        window.addEventListener('load', function () {
-            <?php if (!empty($flags)) : ?>
-            Elm.<?= $app_name ?>.embed(
-                document.getElementById('<?= $app_name ?>'),
-                <?= json_encode($flags) ?>
-            );
-            <?php else : ?>
-            Elm.<?= $app_name ?>.embed(
-                document.getElementById('<?= $app_name ?>')
-            );
-            <?php endif; ?>
-        });
+            window.addEventListener('load', function () {
+                <?php if (!empty($flags)) : ?>
+                Elm.<?= $app_name ?>.init(
+                    {
+                        node: document.getElementById('<?= $app_name ?>'),
+                        flags: <?= json_encode($flags) ?>
+                    });
+                <?php else : ?>
+                Elm.<?= $app_name ?>.init(
+                    {node: document.getElementById('<?= $app_name ?>')}
+                );
+                <?php endif; ?>
+            });
         </script>
 
         <?php return ob_get_clean();

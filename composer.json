@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "earns\\Elm\\": "src/"
+            "Tightenco\\Elm\\": "src/"
         }
     }
 }

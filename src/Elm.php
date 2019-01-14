@@ -25,7 +25,7 @@ class Elm
                 Elm.<?= $app_name ?>.init(
                     {
                         node: document.getElementById('<?= $app_name ?>'),
-                        flags: <?= json_encode($flags) ?>
+                        flags: JSON.parse(<?= json_encode($flags) ?>)
                     });
                 <?php else : ?>
                 Elm.<?= $app_name ?>.init(

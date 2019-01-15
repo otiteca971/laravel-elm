@@ -21,7 +21,7 @@ class Elm
 
         <script>
             window.addEventListener('load', function () {
-                <?php $before ?>
+                <?= $before ?>
                 <?php if (!empty($flags)) : ?>
                 var app_<?= $app_name ?> = Elm.<?= $app_name ?>.init(
                     {
@@ -29,11 +29,11 @@ class Elm
                         flags: JSON.parse(<?= json_encode($flags) ?>)
                     });
                 <?php else : ?>
-                Elm.<?= $app_name ?>.init(
+                var app_<?= $app_name ?> = Elm.<?= $app_name ?>.init(
                     {node: document.getElementById('<?= $app_name ?>')}
                 );
                 <?php endif; ?>
-                <? $after ?>
+                <?= $after ?>
             });
         </script>
 

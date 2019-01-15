@@ -13,7 +13,7 @@ class Elm
      * render the script include,
      * and return the html.
      */
-    public function make($app_name, $flags = [])
+    public function make($app_name, $flags = [], $before="", $after="")
     {
         ob_start(); ?>
 
@@ -21,8 +21,9 @@ class Elm
 
         <script>
             window.addEventListener('load', function () {
+                <?php $before ?>
                 <?php if (!empty($flags)) : ?>
-                Elm.<?= $app_name ?>.init(
+                var app_<?= $app_name ?> = Elm.<?= $app_name ?>.init(
                     {
                         node: document.getElementById('<?= $app_name ?>'),
                         flags: JSON.parse(<?= json_encode($flags) ?>)
@@ -32,6 +33,7 @@ class Elm
                     {node: document.getElementById('<?= $app_name ?>')}
                 );
                 <?php endif; ?>
+                <? $after ?>
             });
         </script>
 

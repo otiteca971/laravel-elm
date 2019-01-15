@@ -3,7 +3,7 @@
     "description": "Render your Elm programs in Laravel --- forked from tightenco/laravel-elm",
     "keywords": ["laravel", "elm"],
     "license": "MIT",
-    "version": "2.0.0",
+    "version": "2.3.0",
     "authors": [
         {
             "name": "Olivier TITECA-BEAUPORT",
